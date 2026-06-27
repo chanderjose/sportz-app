@@ -17,3 +17,25 @@ Content-Type: application/json
   "homeScore": 0,
   "awayScore": 0
 }
+
+### List match comentaries
+GET {{host}}/matches/1/commentary
+Content-Type: application/json
+
+### Create match commentary
+POST {{host}}/matches/1/commentary
+Content-Type: application/json
+
+{
+  "minute": 15,
+  "sequence": 1,
+  "period": "2nd half",
+  "eventType": "goal",
+  "actor": "Player A",
+  "team": "Team A",
+  "message": "Player A scored a goal!",
+  "metadata": {
+    "assist": "Player B"
+  },
+  "tags": ["goal", "teamA"]
+}
